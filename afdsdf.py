@@ -1,6 +1,8 @@
 # Data related to a job list for a CNC machine.
 # Processing times and due dates of each jobs is given.
 # Design a simple decision support system
+# https://www.youtube.com/watch?v=YruybYmpfkQ
+# https://www.youtube.com/watch?v=BpLTAmNLgZc
 
 # Task 1 : It sorts the jobs by “Earliest Due Date” (EDD) principle
 
@@ -44,10 +46,7 @@ for x in range(0, len(startCol)):
 
 print(df)
 
-# writer = pd.ExcelWriter('output.xlsx')
-# df.to_excel(writer, sheet_name='Sheet1', columns=["JobCode"], index=False)
-# writer.save()
-
+writer = pd.ExcelWriter('Files.xlsx', engine='xlsxwriter' )
 
 # Task 2:	computes start and finish times of each job if they are processed in the sequence determined by EDD rule
 
