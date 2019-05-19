@@ -48,7 +48,7 @@ for x in range(0, len(startCol)):
 
 print(df)
 
-# save the dataframe to an excel file
+# save the data frame to an excel file
 df.to_excel('output.xlsx', engine='xlsxwriter', index=False)
 
 
