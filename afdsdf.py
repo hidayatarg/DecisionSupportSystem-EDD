@@ -32,6 +32,8 @@ print(df)
 processTimeCol = sortedByEarliestDueDate['Processing Time']
 # print(processTimeCol[0])
 
+# Task 2:	Computes start and finish times of each job if they are processed in the sequence determined by EDD rule
+# Task 3:   It computes amount of earliness or tardiness of each job
 startCol = df['Start']
 finishCol = df['Finish']
 for x in range(0, len(startCol)):
@@ -46,26 +48,11 @@ for x in range(0, len(startCol)):
 
 print(df)
 
-writer = pd.ExcelWriter('Files.xlsx', engine='xlsxwriter' )
-
-# Task 2:	computes start and finish times of each job if they are processed in the sequence determined by EDD rule
-
-
-# Task 3:   It computes amount of earliness or tardiness of each job
-# Task 4:   It creates the Gant chart of the jobs
+# save the dataframe to an excel file
+df.to_excel('output.xlsx', engine='xlsxwriter', index=False)
 
 
-# First Second work
-# for x in range(0, len(column)):
-#      print(x+1 + ". " + column[x])
+# Task 4:   It creates the Gantt chart of the jobs
 
 
-# import pandas as pd
-#
-# xl = pd.ExcelFile("MachineScheduling.xlsx")
-# df = xl.parse(0)
-# df = df.sort(columns="Job Code")
-#
-# writer = pd.ExcelWriter('output.xlsx')
-# df.to_excel(writer, sheet_name='Sheet1', columns=["JobCode"], index=False)
-# writer.save()
+
